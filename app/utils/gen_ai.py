@@ -1,7 +1,8 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.prompts import ChatPromptTemplate
-from app.utils.prompts import system_message, human_message
+from app.utils.prompts import llm_system_message, llm_human_message
 from dotenv import load_dotenv
+import json
 
 # load environment variables
 load_dotenv()
@@ -15,11 +16,11 @@ llm = ChatGoogleGenerativeAI(
     max_retries=2,
 )
 
-def generate_response(user_preferences: dict):
+def generate_response(user_preferences: dict) -> dict:
   # create messages
   messages = [
-    ("system", system_message),
-    ("human", human_message)]
+    ("system", llm_system_message),
+    ("human", llm_human_message)]
 
   # create prompt
   prompt_template = ChatPromptTemplate.from_messages(messages)
@@ -30,5 +31,12 @@ def generate_response(user_preferences: dict):
   # invoke the model
   result = llm.invoke(ai_prompt)
 
-  # return json response
-  return result.content
+  # clean response
+  # remove ```json from beginning and ``` from end
+  cleaned_response = result.content.strip("```json\n").strip("```")
+
+  try:
+    return json.loads(cleaned_response)
+  except json.JSONDecodeError as e:
+    print("Error parsing JSON:", e)
+    return None
