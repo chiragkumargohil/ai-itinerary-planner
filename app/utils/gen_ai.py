@@ -16,7 +16,7 @@ llm = ChatGoogleGenerativeAI(
     max_retries=2,
 )
 
-def generate_response(user_preferences: dict) -> dict:
+def generate_response(user_preferences: dict) -> dict | str:
   # create messages
   messages = [
     ("system", llm_system_message),
@@ -36,7 +36,8 @@ def generate_response(user_preferences: dict) -> dict:
   cleaned_response = result.content.strip("```json\n").strip("```")
 
   try:
+    # parse response
     return json.loads(cleaned_response)
   except json.JSONDecodeError as e:
     print("Error parsing JSON:", e)
-    return None
+    return cleaned_response

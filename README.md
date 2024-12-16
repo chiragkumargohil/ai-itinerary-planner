@@ -126,7 +126,134 @@ You can manually set up the project:
 ```json
 {
   "status": "success",
-  "data": "Day 1: Vadodara to Dwarka\nDay 2: Dwarka to Somnath\nDay 3: Somnath to Gir Forest\nDay 4: Gir Forest to Diu\nDay 5: Diu to Vadodara\n\nPlease include a visit to the local markets."
+  "data": {
+      "additional_notes": "This itinerary focuses on Dwarka as per your request.  Consider travel insurance and book accommodations in advance, especially during peak season.  Pack light, comfortable clothing suitable for a temple visit and the coastal climate.",
+      "additional_recommendations": {
+         "activities": [
+            "Visit the Nageshwar Jyotirlinga Temple",
+            "Explore the Gopi Talav",
+            "Take a boat trip to Beyt Dwarka"
+         ],
+         "food": [
+            "Try the local kesar mango milkshake",
+            "Sample the various types of farsan available"
+         ]
+      },
+      "itinerary": {
+         "day_1": {
+            "afternoon": {
+               "activity": "Lunch at Hotel Highway Treat",
+               "location": "Near Anand (on the way to Dwarka)",
+               "notes": "Known for its traditional Gujarati Thali.",
+               "time": "1:00 PM"
+            },
+            "evening": {
+               "activity": "Check in to hotel and relax",
+               "location": "Dwarka",
+               "notes": "Consider hotels like Hotel Dwarkadhish or similar based on your budget.",
+               "time": "7:00 PM"
+            },
+            "morning": {
+               "activity": "Depart from Vadodara",
+               "location": "Vadodara",
+               "notes": "Start early for a comfortable drive.",
+               "time": "7:00 AM"
+            }
+         },
+         "day_2": {
+            "afternoon": {
+               "activity": "Lunch at a local restaurant",
+               "location": "Dwarka",
+               "notes": "Try local Gujarati dishes and seafood.",
+               "time": "1:00 PM"
+            },
+            "evening": {
+               "activity": "Visit Gomti Ghat and witness the evening aarti",
+               "location": "Dwarka",
+               "notes": "A serene experience by the Gomti River.",
+               "time": "5:00 PM"
+            },
+            "morning": {
+               "activity": "Visit Dwarkadhish Temple",
+               "location": "Dwarka",
+               "notes": "One of the Char Dhams, a significant pilgrimage site.",
+               "time": "8:00 AM"
+            }
+         },
+         "day_3": {
+            "afternoon": {
+               "activity": "Lunch and explore local markets",
+               "location": "Dwarka",
+               "notes": "Shop for souvenirs and local handicrafts.",
+               "time": "1:00 PM"
+            },
+            "evening": {
+               "activity": "Relax at the beach and enjoy the sunset",
+               "location": "Dwarka Beach",
+               "notes": "Enjoy the peaceful atmosphere.",
+               "time": "6:00 PM"
+            },
+            "morning": {
+               "activity": "Visit Rukmini Devi Temple",
+               "location": "Dwarka",
+               "notes": "Dedicated to Rukmini, the wife of Lord Krishna.",
+               "time": "9:00 AM"
+            }
+         },
+         "day_4": {
+            "afternoon": {
+               "activity": "Lunch at a local restaurant",
+               "location": "Beyt Dwarka",
+               "notes": "Enjoy fresh seafood.",
+               "time": "1:00 PM"
+            },
+            "evening": {
+               "activity": "Return to Dwarka and relax",
+               "location": "Dwarka",
+               "notes": "Prepare for the return journey.",
+               "time": "5:00 PM"
+            },
+            "morning": {
+               "activity": "Drive to Beyt Dwarka",
+               "location": "Beyt Dwarka",
+               "notes": "An island believed to be the original residence of Lord Krishna.",
+               "time": "8:00 AM"
+            }
+         },
+         "day_5": {
+            "afternoon": {
+               "activity": "Lunch en route",
+               "location": "On the way to Vadodara",
+               "notes": "Stop at a restaurant of your choice.",
+               "time": "1:00 PM"
+            },
+            "evening": {
+               "activity": "Arrive back in Vadodara",
+               "location": "Vadodara",
+               "notes": "End of trip.",
+               "time": "7:00 PM"
+            },
+            "morning": {
+               "activity": "Depart from Dwarka",
+               "location": "Dwarka",
+               "notes": "Start early for a comfortable drive back to Vadodara.",
+               "time": "8:00 AM"
+            }
+         }
+      },
+      "user_details": {
+         "budget": "Moderate",
+         "companions": "Family",
+         "constraints": "None",
+         "duration": "5 days",
+         "interests": "Food",
+         "origin": "Vadodara",
+         "special_notes": "",
+         "travel_mode": "Car",
+         "travel_pace": "Normal",
+         "trip_type": "Cultural"
+      }
+   },
 }
 ```
 

@@ -10,13 +10,13 @@ llm_system_message = """
   Respond with a JSON object containing:  
   1. `"user_details"`: A summary of the user's input.  
   2. `"itinerary"`: A detailed day-by-day breakdown of travel plans.  
-  Each day should include morning, afternoon, and evening activities (in an array), along with associated locations, suggested times, and notes.  
+  Each day should include morning, afternoon, and evening activities, along with associated locations, suggested times, and notes.  
   3. `"additional_recommendations"`: Optional activities or locations aligned with the user's interests that could enhance their experience.
   4. `"additional_notes"`: Additional notes or suggestions for the user.
 """
 
 llm_human_message = """
-  User plans to travel to {start_location} for {number_of_days} days with {travel_companions}.  
+  User plans to travel from {start_location} for {number_of_days} days with {travel_companions}.  
   They are interested in {interests} and have a {budget_range} budget.  
   They prefer to travel by {preferred_modes_of_travel} and have a {travel_pace} travel pace.  
   They have specific locations in mind, such as {specific_locations}.  
